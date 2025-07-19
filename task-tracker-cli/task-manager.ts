@@ -1,44 +1,91 @@
-import fs from 'fs';
+import { LOADIPHLPAPI } from "dns";
+import fs from "fs";
+import { isSetAccessor } from "typescript";
+import { v4 as uuidv4 } from "uuid";
+type Status = "todo" | "in-progress" | "done";
+export type Task = {
+  id: string;
+  description: string;
+  status: Status;
+  createAt: Date;
+  updatedAt: Date;
+};
 
-export type Task = { id: number; title: string; completed: boolean };
-
-const file = 'tasks.json';
+const file = "tasks.json";
 
 export const loadTasks = (): Task[] => {
   if (!fs.existsSync(file)) return [];
-  return JSON.parse(fs.readFileSync(file, 'utf-8'));
+  return JSON.parse(fs.readFileSync(file, "utf-8"));
 };
 
 export const saveTasks = (tasks: Task[]) => {
   fs.writeFileSync(file, JSON.stringify(tasks, null, 2));
 };
 
-export const addTask = (title: string) => {
+export const addTask = (description: string) => {
   const tasks = loadTasks();
-  tasks.push({ id: Date.now(), title, completed: false });
+  tasks.push({
+    id: uuidv4(),
+    description,
+    status: "todo",
+    createAt: new Date(),
+    updatedAt: new Date(),
+  });
   saveTasks(tasks);
-  console.log(`Đã thêm: ${title}`);
+  console.log(`Added: ${description}`);
+};
+
+export const deleteTask = (id: string) => {
+  const tasks = loadTasks().filter((t) => t.id !== id);
+  saveTasks(tasks);
+  console.log(`Removed ${id}`);
+};
+
+export const updateTask = (
+  id: string,
+  updates: {
+    description?: string;
+    status?: Status;
+  }
+) => {
+  const tasks = loadTasks();
+  const index = tasks.findIndex((t) => t.id === id);
+
+  if (updates.description) tasks[index].description = updates.description;
+  if (updates.status) tasks[index].status = updates.status;
+  tasks[index].updatedAt = new Date();
+  saveTasks(tasks);
+  console.log(`Saved task ${id}`);
 };
 
 export const listTasks = () => {
   const tasks = loadTasks();
-  tasks.forEach(task => {
-    const status = task.completed ? '✔' : ' ';
-    console.log(`[${status}] ${task.id}: ${task.title}`);
+  tasks.forEach((task) => {
+    console.log(`[${task.status}] ${task.id}: ${task.description}\n
+        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
   });
 };
 
-export const completeTask = (id: number) => {
-  const tasks = loadTasks();
-  const updated = tasks.map(t =>
-    t.id === id ? { ...t, completed: true } : t
-  );
-  saveTasks(updated);
-  console.log(`Đã hoàn thành task ${id}`);
+export const listTasksDone = () => {
+  const tasks = loadTasks().filter((t) => t.status === "done");
+  tasks.forEach((task) => {
+    console.log(`[${task.status}] ${task.id}: ${task.description}\n
+        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+  });
 };
 
-export const deleteTask = (id: number) => {
-  const tasks = loadTasks().filter(t => t.id !== id);
-  saveTasks(tasks);
-  console.log(`Đã xoá task ${id}`);
+export const listTasksInProgess = () => {
+  const tasks = loadTasks().filter((t) => t.status === "in-progress");
+  tasks.forEach((task) => {
+    console.log(`[${task.status}] ${task.id}: ${task.description}\n
+        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+  });
+};
+
+export const listTasksTodo = () => {
+  const tasks = loadTasks().filter((t) => t.status === "todo");
+  tasks.forEach((task) => {
+    console.log(`[${task.status}] ${task.id}: ${task.description}\n
+        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+  });
 };
