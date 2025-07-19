@@ -20,10 +20,10 @@ exports.saveTasks = saveTasks;
 const addTask = (description) => {
     const tasks = (0, exports.loadTasks)();
     tasks.push({
-        status: "todo",
-        createAt: new Date(),
         id: (0, uuid_1.v4)(),
         description,
+        status: "todo",
+        createAt: new Date(),
         updatedAt: new Date(),
     });
     (0, exports.saveTasks)(tasks);
@@ -51,32 +51,28 @@ exports.updateTask = updateTask;
 const listTasks = () => {
     const tasks = (0, exports.loadTasks)();
     tasks.forEach((task) => {
-        console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+        console.log(`[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`);
     });
 };
 exports.listTasks = listTasks;
 const listTasksDone = () => {
     const tasks = (0, exports.loadTasks)().filter((t) => t.status === "done");
     tasks.forEach((task) => {
-        console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+        console.log(`[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`);
     });
 };
 exports.listTasksDone = listTasksDone;
 const listTasksInProgess = () => {
     const tasks = (0, exports.loadTasks)().filter((t) => t.status === "in-progress");
     tasks.forEach((task) => {
-        console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+        console.log(`[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`);
     });
 };
 exports.listTasksInProgess = listTasksInProgess;
 const listTasksTodo = () => {
     const tasks = (0, exports.loadTasks)().filter((t) => t.status === "todo");
     tasks.forEach((task) => {
-        console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+        console.log(`[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`);
     });
 };
 exports.listTasksTodo = listTasksTodo;

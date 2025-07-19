@@ -39,4 +39,24 @@ program
     .action((id) => {
     (0, task_manager_1.deleteTask)(String(id));
 });
+program
+    .command('update')
+    .argument('<id>', 'ID task to update')
+    .option('-d, --description <desc>', 'Description of task')
+    .option('-s, --status <status>', 'Status of task')
+    .description('Update task by ID')
+    .action((id, options) => {
+    const updates = {};
+    if (options.description) {
+        updates.description = options.description;
+    }
+    if (options.status) {
+        updates.status = options.status;
+    }
+    if (Object.keys(updates).length === 0) {
+        console.log('No update fields provided. Use -d or -s.');
+        return;
+    }
+    (0, task_manager_1.updateTask)(id, updates);
+});
 program.parse();

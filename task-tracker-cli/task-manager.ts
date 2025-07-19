@@ -61,31 +61,35 @@ export const updateTask = (
 export const listTasks = () => {
   const tasks = loadTasks();
   tasks.forEach((task) => {
-    console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+    console.log(
+      `[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`
+    );
   });
 };
 
 export const listTasksDone = () => {
   const tasks = loadTasks().filter((t) => t.status === "done");
   tasks.forEach((task) => {
-    console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+    console.log(
+      `[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`
+    );
   });
 };
 
 export const listTasksInProgess = () => {
   const tasks = loadTasks().filter((t) => t.status === "in-progress");
   tasks.forEach((task) => {
-    console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+    console.log(
+      `[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`
+    );
   });
 };
 
 export const listTasksTodo = () => {
   const tasks = loadTasks().filter((t) => t.status === "todo");
   tasks.forEach((task) => {
-    console.log(`[${task.status}] ${task.id}: ${task.description}\n
-        \tCreated: ${task.createAt}, Updated: ${task.updatedAt}`);
+    console.log(
+      `[${task.status}] ${task.id}: ${task.description}\nCreated: ${task.createAt}\nUpdated: ${task.updatedAt}\n`
+    );
   });
 };
