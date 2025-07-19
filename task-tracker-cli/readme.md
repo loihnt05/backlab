@@ -20,4 +20,32 @@
 - Do not use any external libraries or frameworks to build this project.
 - Ensure to handle errors and edge cases gracefully.
 
+## Conduct task with CLI
+- Install commander ```pnpm add commander``` or ```pnpm add -D @types/commander```
 
+- Add bin into package.json to build task:
+```json
+"bin": {
+  "task": "dist/task.js"
+}
+```
+
+- Write in a head of task.ts ```#!/usr/bin/env node``` 
+
+- ```ts.config.json ``` like 
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "./",
+    "esModuleInterop": true
+  },
+  "include": ["task.ts", "taskManager.ts"]
+}
+```
+- Compile code from .ts to .js to run ```npx tsc ```
+- Grant execution permission ```chmod +x dist/task.js```
+
+- Link to global file ```npm link```
