@@ -49,3 +49,12 @@
 - Grant execution permission ```chmod +x dist/task.js```
 
 - Link to global file ```npm link```
+
+## How to use Task Tracker CLI
+
+```json
+task-cli add "new task" // create new task
+task-cli update "1" -d "new change" -s "done" // update description and status by id
+task-cli delete "2" // delete task by id
+task-cli list // all tasks
+```
