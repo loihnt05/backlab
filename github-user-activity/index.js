@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const axios = require('axios');
-const chalk = require('chalk');
-const { program } = require('commander');
+import axios from 'axios';
+import chalk from 'chalk';
+import { program } from 'commander';
 
 program
   .name('GitHub Activity CLI')
@@ -19,7 +19,7 @@ program
         },
       });
 
-      const events = response.data.slice(0, 5); // show top 5 recent events
+      const events = response.data.slice(0, 5);
       console.log(chalk.green(`\nRecent GitHub Activity for ${username}:\n`));
 
       if (events.length === 0) {
