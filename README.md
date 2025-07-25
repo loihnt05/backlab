@@ -22,7 +22,7 @@ Click any of the images below to view the readme and live demo of the project.
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
 
   <a href="https://github.com/loihnt05/backlab/tree/main/task-tracker-cli">
-    <img src="./assets/task-tracker.png" alt="Task Tracker Screenshot" style="height: 180px;" />
+    <img src="./assets/task-tracker.png" alt="Task Tracker Screenshot" style="height: auto; width: 70%" />
   </a>
   <a href="https://github.com/loihnt05/backlab/tree/main/github-user-activity">
     <img src="./assets/github-user-activity.png" alt="Task Tracker Screenshot" style="width: 70%; height: auto" />
