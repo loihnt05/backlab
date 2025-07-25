@@ -9,7 +9,6 @@ import {
   updateTask,
   deleteTask,
 } from "./task-manager";
-import { stringToBytes } from "uuid/dist/cjs/v35";
 
 const program = new Command();
 

@@ -11,7 +11,6 @@
 
 ## Implementation
 
-
 - You can use any programming language to build this project.
 - Use positional arguments in command line to accept user inputs.
 - Use a JSON file to store the tasks in the current directory.
