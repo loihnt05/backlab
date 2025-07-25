@@ -33,7 +33,7 @@
 
 - ```ts.config.json ``` like 
 ```json
-{
+{ 
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",

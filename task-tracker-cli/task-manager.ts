@@ -5,7 +5,7 @@ export type Task = {
   id: string;
   description: string;
   status: Status;
-  createAt: Date;
+  createAt: Date; 
   updatedAt: Date;
 };
 

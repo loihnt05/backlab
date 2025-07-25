@@ -12,6 +12,14 @@
   "type": "module",
   "dependencies": {
     "chalk": "^5.4.1",
-    "commander": "^14.0.0"
+    "commander": "^14.0.0",
+    "fs": "^0.0.1-security",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0"
+  }, 
+  "bin": {
+    "expense-tracker": "dist/index.js"
   }
 }
