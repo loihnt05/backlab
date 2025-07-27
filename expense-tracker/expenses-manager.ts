@@ -70,9 +70,9 @@ export const updateExpense = (
 ) => {
   const expenses = loadExpense();
   const index = expenses.findIndex((ex) => ex.id === id);
-  if (index === -1 ) {
-    console.log("Fail")
-    return null
+  if (index === -1) {
+    console.log("Fail");
+    return null;
   }
 
   return (expenses[index] = {
@@ -83,9 +83,27 @@ export const updateExpense = (
 };
 
 // summary all expenses
+export const summaryAllExpenses = () => {
+  const expenses = loadExpense();
+  let total = 0;
+  expenses.forEach((ex) => {
+    total += ex.amount;
+  });
+  console.log(`Total All of Expenses: ${total}`);
+};
 
 // summary all expenses for specific month
+export const summaryExpenseSpecMonth = (month: number) => {
+  const expenses = loadExpense().filter((ex) => {
+    const expenseMonth = new Date(ex.date).getMonth() + 1;
+    return expenseMonth === month;
+  });
+  console.log(`Filtered expenses in month ${month}:`);
+  console.table(expenses);
 
+  const total = expenses.reduce((sum, ex) => sum + ex.amount, 0);
+  console.log(`Total expenses in month ${month}: ${total}`);
+};
 // export csv
 
 // add categories -> filter categories

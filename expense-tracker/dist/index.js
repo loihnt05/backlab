@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import { addExpense, getAllExpense, removeExpense, updateExpense, } from "./expenses-manager.js";
+import { addExpense, getAllExpense, removeExpense, summaryAllExpenses, summaryExpenseSpecMonth, updateExpense, } from "./expenses-manager.js";
 const program = new Command();
 program.name("expense").description("Expenses Tracker").version("1.0.0");
 program
@@ -38,5 +38,26 @@ program
     .option("-a, --amount <amount>", "amount")
     .action((id, options) => {
     updateExpense(id, options.description, options.amount);
+});
+program
+    .command("summary")
+    .description("Summary all of expenses")
+    .option("-a, --all", "Summarize all expenses")
+    .option("-m, --month <month>", "Summarize by month")
+    .action((options) => {
+    if (options.all && options.month !== undefined) {
+        console.log("I don't understand");
+        process.exit(1);
+    }
+    if (!options.all && options.month === undefined) {
+        console.log("I don't understand");
+        process.exit(1);
+    }
+    if (options.all) {
+        summaryAllExpenses();
+    }
+    else {
+        summaryExpenseSpecMonth(Number(options.month));
+    }
 });
 program.parse();

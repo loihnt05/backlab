@@ -54,19 +54,10 @@ export const getAllExpense = () => {
 export const updateExpense = (id, description, amount) => {
     const expenses = loadExpense();
     const index = expenses.findIndex((ex) => ex.id === id);
-    console.log(id);
-    console.log(index);
-    console.log(expenses);
     if (index === -1) {
         console.log("Fail");
         return null;
     }
-    console.log("successful");
-    console.log(expenses[index] = {
-        ...expenses[index],
-        ...(description !== undefined && { description }),
-        ...(amount !== undefined && { amount }),
-    });
     return (expenses[index] = {
         ...expenses[index],
         ...(description !== undefined && { description }),
@@ -74,6 +65,25 @@ export const updateExpense = (id, description, amount) => {
     });
 };
 // summary all expenses
+export const summaryAllExpenses = () => {
+    const expenses = loadExpense();
+    let total = 0;
+    expenses.forEach((ex) => {
+        total += ex.amount;
+    });
+    console.log(`Total All of Expenses: ${total}`);
+};
 // summary all expenses for specific month
+export const summaryExpenseSpecMonth = (month) => {
+    const expenses = loadExpense().filter((ex) => {
+        const expenseMonth = new Date(ex.date).getMonth() + 1;
+        console.log(expenseMonth);
+        return expenseMonth === month;
+    });
+    console.log(`Filtered expenses in month ${month}:`);
+    console.table(expenses);
+    const total = expenses.reduce((sum, ex) => sum + ex.amount, 0);
+    console.log(`🧾 Total expenses in month ${month}: ${total}`);
+};
 // export csv
 // add categories -> filter categories

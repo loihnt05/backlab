@@ -5,6 +5,8 @@ import {
   addExpense,
   getAllExpense,
   removeExpense,
+  summaryAllExpenses,
+  summaryExpenseSpecMonth,
   updateExpense,
 } from "./expenses-manager.js";
 
@@ -50,4 +52,26 @@ program
   .action((id, options) => {
     updateExpense(id, options.description, options.amount);
   });
+
+program
+  .command("summary")
+  .description("Summary all of expenses")
+  .option("-a, --all", "Summarize all expenses")
+  .option("-m, --month <month>", "Summarize by month")
+  .action((options) => {
+    if (options.all && options.month !== undefined) {
+      console.log("I don't understand")
+      process.exit(1)
+    }
+    if (!options.all && options.month === undefined) {
+      console.log("I don't understand")
+      process.exit(1)
+    }
+
+    if (options.all) {
+      summaryAllExpenses();
+    } else {
+      summaryExpenseSpecMonth(Number(options.month))
+    }
+  })
 program.parse();
