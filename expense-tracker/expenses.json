@@ -1,14 +1,14 @@
 [
   {
     "id": "d8e27dca-cc5e-47a1-898d-a7da39250e2d",
-    "amount": 10,
+    "date": "2025-07-25T17:43:46.593Z",
     "description": "teo",
-    "date": "2025-07-25T17:43:46.593Z"
+    "amount": 10
   },
   {
     "id": "541b7531-1d76-4c5e-88f7-f2299f4ddb31",
-    "amount": 100,
+    "date": "2025-07-25T17:43:55.888Z",
     "description": "ho",
-    "date": "2025-07-25T17:43:55.888Z"
+    "amount": 100
   }
 ]

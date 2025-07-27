@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import { addExpense, removeExpense } from "./expenses-manager.js";
+import { addExpense, getAllExpense, removeExpense, updateExpense, } from "./expenses-manager.js";
 const program = new Command();
 program.name("expense").description("Expenses Tracker").version("1.0.0");
 program
@@ -25,5 +25,18 @@ program
     .argument("<id>", "id of expense want to delete")
     .action((id) => {
     removeExpense(id);
+});
+program
+    .command("list")
+    .description("get all expenses")
+    .action(() => getAllExpense());
+program
+    .command("update")
+    .description("update expense by id")
+    .argument("<id>", "id to update")
+    .option("-d, --description <description>", "description")
+    .option("-a, --amount <amount>", "amount")
+    .action((id, options) => {
+    updateExpense(id, options.description, options.amount);
 });
 program.parse();

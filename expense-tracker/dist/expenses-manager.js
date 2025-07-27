@@ -13,9 +13,9 @@ export const addExpense = (description, amount) => {
     const expenses = loadExpense();
     expenses.push({
         id: uuidv4(),
-        amount,
-        description,
         date: new Date(),
+        description,
+        amount,
     });
     try {
         saveExpense(expenses);
@@ -35,3 +35,45 @@ export const removeExpense = (id) => {
         console.log("Remove expense fail");
     }
 };
+export const getAllExpense = () => {
+    const expenses = loadExpense();
+    try {
+        if (expenses.length === 0) {
+            console.log("No have any expense");
+        }
+        else {
+            console.log("All Expenses detail");
+            console.table(expenses);
+        }
+    }
+    catch (e) {
+        console.log(e);
+    }
+};
+// update
+export const updateExpense = (id, description, amount) => {
+    const expenses = loadExpense();
+    const index = expenses.findIndex((ex) => ex.id === id);
+    console.log(id);
+    console.log(index);
+    console.log(expenses);
+    if (index === -1) {
+        console.log("Fail");
+        return null;
+    }
+    console.log("successful");
+    console.log(expenses[index] = {
+        ...expenses[index],
+        ...(description !== undefined && { description }),
+        ...(amount !== undefined && { amount }),
+    });
+    return (expenses[index] = {
+        ...expenses[index],
+        ...(description !== undefined && { description }),
+        ...(amount !== undefined && { amount }),
+    });
+};
+// summary all expenses
+// summary all expenses for specific month
+// export csv
+// add categories -> filter categories
