@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 import { Command } from "commander";
 import { addExpense, getAllExpense, removeExpense, summaryAllExpenses, summaryExpenseSpecMonth, updateExpense, } from "./expenses-manager.js";
+import path, { dirname } from "path";
+import fs from "fs";
+import { parse } from "json2csv";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const program = new Command();
 program.name("expense").description("Expenses Tracker").version("1.0.0");
 program
@@ -58,6 +64,28 @@ program
     }
     else {
         summaryExpenseSpecMonth(Number(options.month));
+    }
+});
+program
+    .command("export")
+    .description("Export all detail CSV")
+    .action(() => {
+    const inputPath = path.resolve(__dirname, "../expenses.json");
+    const outputPath = path.resolve(__dirname, "expenses.csv");
+    try {
+        const jsonData = fs.readFileSync(inputPath, "utf-8");
+        const expenses = JSON.parse(jsonData);
+        if (expenses.length === 0) {
+            console.log("NOT INFORMATION");
+            process.exit(1);
+        }
+        const csv = parse(expenses);
+        fs.writeFileSync(outputPath, csv);
+        console.log(`Export ${expenses.length} data lines ${outputPath}`);
+    }
+    catch (err) {
+        console.error("Errors:", err);
+        process.exit(1);
     }
 });
 program.parse();

@@ -104,6 +104,5 @@ export const summaryExpenseSpecMonth = (month: number) => {
   const total = expenses.reduce((sum, ex) => sum + ex.amount, 0);
   console.log(`Total expenses in month ${month}: ${total}`);
 };
-// export csv
 
 // add categories -> filter categories

@@ -77,13 +77,11 @@ export const summaryAllExpenses = () => {
 export const summaryExpenseSpecMonth = (month) => {
     const expenses = loadExpense().filter((ex) => {
         const expenseMonth = new Date(ex.date).getMonth() + 1;
-        console.log(expenseMonth);
         return expenseMonth === month;
     });
     console.log(`Filtered expenses in month ${month}:`);
     console.table(expenses);
     const total = expenses.reduce((sum, ex) => sum + ex.amount, 0);
-    console.log(`🧾 Total expenses in month ${month}: ${total}`);
+    console.log(`Total expenses in month ${month}: ${total}`);
 };
-// export csv
 // add categories -> filter categories
