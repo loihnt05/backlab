@@ -118,5 +118,11 @@
     "date": "2025-12-01T09:00:00.000Z",
     "description": "nuoc ep",
     "amount": 28
+  },
+  {
+    "id": "21acc122-5793-4dbf-a87a-85eef5f162f9",
+    "date": "2025-07-27T15:59:39.480Z",
+    "description": "coca",
+    "amount": 15
   }
 ]

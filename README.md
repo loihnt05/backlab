@@ -25,7 +25,10 @@ Click any of the images below to view the readme and live demo of the project.
     <img src="./assets/task-tracker.png" alt="Task Tracker Screenshot" style="height: auto; width: 70%" />
   </a>
   <a href="https://github.com/loihnt05/backlab/tree/main/github-user-activity">
-    <img src="./assets/github-user-activity.png" alt="Task Tracker Screenshot" style="width: 70%; height: auto" />
+    <img src="./assets/github-user-activity.png" alt="Github activity Screenshot" style="width: 70%; height: auto" />
+  </a>
+  <a href="https://github.com/loihnt05/backlab/tree/main/expense-tracker">
+    <img src="./assets/expense-tracker.png" alt="Expense Tracker Screenshot" style="width: 70%; height: auto" />
   </a>
 </div>
 
