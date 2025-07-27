@@ -8,6 +8,7 @@ This repository contains backend projects built following the roadmap.sh back-en
 
 - <a href='https://github.com/loihnt05/backlab/tree/main/task-tracker-cli'> Task Tracker CLI </a>
 - <a href='https://github.com/loihnt05/backlab/tree/main/github-user-activity'> Github User Activity </a>
+- <a href='https://github.com/loihnt05/backlab/tree/main/expense-tracker'> Github User Activity </a>
 
 ### 🧰 Intermediate
 
