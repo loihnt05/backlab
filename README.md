@@ -8,7 +8,8 @@ This repository contains backend projects built following the roadmap.sh back-en
 
 - <a href='https://github.com/loihnt05/backlab/tree/main/task-tracker-cli'> Task Tracker CLI </a>
 - <a href='https://github.com/loihnt05/backlab/tree/main/github-user-activity'> Github User Activity </a>
-- <a href='https://github.com/loihnt05/backlab/tree/main/expense-tracker'> Github User Activity </a>
+- <a href='https://github.com/loihnt05/backlab/tree/main/expense-tracker'> Expense Tracker </a>
+- <a href='https://github.com/loihnt05/backlab/tree/main/number-guessing-game'> Number Guessing Game </a>
 
 ### 🧰 Intermediate
 
@@ -30,6 +31,9 @@ Click any of the images below to view the readme and live demo of the project.
   </a>
   <a href="https://github.com/loihnt05/backlab/tree/main/expense-tracker">
     <img src="./assets/expense-tracker.png" alt="Expense Tracker Screenshot" style="width: 70%; height: auto" />
+  </a>
+  <a href="https://github.com/loihnt05/backlab/tree/main/number-guessing-game">
+    <img src="./assets/game-guessing.png" alt="Number Guessing Game Screenshot" style="width: 70%; height: auto" />
   </a>
 </div>
 

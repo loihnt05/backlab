@@ -16,3 +16,7 @@
 - Add a timer to see how long it takes the user to guess the number.
 - Implement a hint system that provides clues to the user if they are stuck.
 - Keep track of the user’s high score (i.e., the fewest number of attempts it took to guess the number under a specific difficulty level).
+
+## How to run
+
+Run `game-guessing` (in directory) or `node index.js`
