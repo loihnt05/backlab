@@ -25,3 +25,12 @@ button {
     width: 50%;
     align-self: center;
 }
+
+#result {
+    display: flex;
+    flex-direction: column;
+}
+
+.error {
+    color: red;
+}
