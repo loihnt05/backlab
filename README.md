@@ -1,6 +1,6 @@
 # 🛠️ Backend Laboratory
 
-This repository contains backend projects built following the roadmap.sh back-end developer path.
+This repository contains backend projects built following the <a href="https://roadmap.sh/backend/projects">roadmap</a> back-end developer path.
 
 ## 📂 Projects List
 
