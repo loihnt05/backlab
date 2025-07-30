@@ -20,3 +20,5 @@
 ## How to run
 
 Run `game-guessing` (in directory) or `node index.js`
+
+<img src="../assets/game-guessing.png" />

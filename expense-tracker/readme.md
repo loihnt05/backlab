@@ -20,3 +20,5 @@
 - Use a simple text file to store the expenses data. You can use JSON, CSV, or any other format to store the data.
 - Add error handling to handle invalid inputs and edge cases (e.g. negative amounts, non-existent expense IDs, etc).
 - Use functions to modularize the code and make it easier to test and maintain.
+
+<img src="../assets/expense-tracker.png" />

@@ -57,3 +57,5 @@ task-cli update "1" -d "new change" -s "done" // update description and status b
 task-cli delete "2" // delete task by id
 task-cli list // all tasks
 ```
+
+<img src="../assets/task-tracker.png" />

@@ -36,3 +36,5 @@ npm link
 ```
 
 - ```"type": "module"``` package.json change ```commonjs```
+
+<img src="../assets/github-user-activity.png" />
