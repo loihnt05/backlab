@@ -1,4 +1,4 @@
-import Article from "./components/Article";
+import Article, { ArticleHome } from "./components/Article";
 import EditArticle from "./components/Edit-Article";
 
 export type Article = {
@@ -82,8 +82,9 @@ function App() {
           </div>
         );
       })} */}
-      <EditArticle title="Update"></EditArticle>
+      {/* <EditArticle title="Update"></EditArticle> */}
       {/* <Article article={dummydata[2]}/> */}
+      <ArticleHome listArticle={dummydata} admin={true}></ArticleHome>
 
     </div>
   );
