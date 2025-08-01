@@ -1,11 +1,9 @@
-
 function App() {
-
   return (
-    <div className='text-red-500'>
-      helo
+    <div>
+      <h1 className="text-2xl font-bold">Personal Blog</h1>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
