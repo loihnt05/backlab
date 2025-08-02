@@ -1,5 +1,4 @@
 import Article, { ArticleHome } from "./components/Article";
-import EditArticle from "./components/Edit-Article";
 
 export type Article = {
   title: string;
