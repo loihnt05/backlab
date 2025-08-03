@@ -1,0 +1,52 @@
+[
+  {
+    "title": "The Rise of TypeScript",
+    "publishDate": "2024-01-15T00:00:00.000Z",
+    "content": "TypeScript is quickly becoming the go-to language for scalable JavaScript development."
+  },
+  {
+    "title": "Understanding React Hooks",
+    "publishDate": "2024-02-10T00:00:00.000Z",
+    "content": "Hooks are functions that let you use state and other React features without writing a class."
+  },
+  {
+    "title": "10 Tips for Clean Code",
+    "publishDate": "2024-03-05T00:00:00.000Z",
+    "content": "Clean code is all about readability, simplicity, and maintainability."
+  },
+  {
+    "title": "Exploring Node.js Streams",
+    "publishDate": "2024-04-12T00:00:00.000Z",
+    "content": "Streams provide an efficient way to handle reading/writing files, network communications, or any end-to-end information exchange."
+  },
+  {
+    "title": "CSS Grid vs Flexbox",
+    "publishDate": "2024-05-22T00:00:00.000Z",
+    "content": "Both Grid and Flexbox are powerful layout systems. Understanding when to use each is key."
+  },
+  {
+    "title": "A Guide to JavaScript Closures",
+    "publishDate": "2024-06-01T00:00:00.000Z",
+    "content": "Closures are functions that remember the variables from the place where they were defined, even after that context has gone."
+  },
+  {
+    "title": "Improving Web Performance",
+    "publishDate": "2024-06-18T00:00:00.000Z",
+    "content": "Optimizing images, using lazy loading, and reducing render-blocking resources are crucial for performance."
+  },
+  {
+    "title": "Demystifying Async/Await",
+    "publishDate": "2024-07-04T00:00:00.000Z",
+    "content": "Async/await simplifies asynchronous programming by allowing you to write promise-based code as if it were synchronous."
+  },
+  {
+    "title": "The Basics of Functional Programming",
+    "publishDate": "2024-07-20T00:00:00.000Z",
+    "content": "Functional programming is a paradigm that treats computation as the evaluation of mathematical functions."
+  },
+  {
+    "title": "What's New in ES2025",
+    "publishDate": "2025-01-01T00:00:00.000Z",
+    "content": "The latest ECMAScript introduces pattern matching, improved async handling, and more."
+  }
+]
