@@ -68,6 +68,7 @@ const dummydata: Article[] = [
       "The latest ECMAScript introduces pattern matching, improved async handling, and more.",
   },
 ];
+const login = localStorage.getItem("login") === 'admin'
 
 function App() {
   return (
@@ -83,7 +84,7 @@ function App() {
       })} */}
       {/* <EditArticle title="Update"></EditArticle> */}
       {/* <Article article={dummydata[2]}/> */}
-      <ArticleHome listArticle={dummydata} admin={true}></ArticleHome>
+      <ArticleHome listArticle={dummydata} admin={!!login}></ArticleHome>
 
     </div>
   );
