@@ -1,6 +1,7 @@
 import Article, { ArticleHome } from "./components/Article";
 import data from "./data.json";
 export type Article = {
+  id: string
   title: string;
   publishDate: Date;
   content: string;
