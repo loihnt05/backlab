@@ -45,9 +45,14 @@ export function ArticleHome({
   listArticle: Article[];
 }) {
   const [deleteItem, setDeleteItem] = useState<Article>();
-  const [listArticles, setListArticles] = useState<Article[]>(listArticle)
+  const [listArticles, setListArticles] = useState<Article[]>(listArticle);
   const nav = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
+
+  // Update local state when prop changes
+  useEffect(() => {
+    setListArticles(listArticle);
+  }, [listArticle]);
   const handleDelete = (article: Article) => {
     setListArticles((prev => prev.filter(item => item.id !== article.id)))
   };

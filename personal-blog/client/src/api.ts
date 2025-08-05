@@ -14,7 +14,13 @@ export async function fetchProtectedData(username: string, password: string) {
 }
 
 export async function fetchArticles(): Promise<Article[]> {
-  const res = await axios.get("http://localhost:3000/items");
+  // Use admin credentials for authentication
+  const token = btoa("admin:admin");
+  const res = await axios.get("http://localhost:3000/items", {
+    headers: {
+      Authorization: `Basic ${token}`
+    }
+  });
   return res.data;
 }
 
