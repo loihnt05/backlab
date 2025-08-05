@@ -1,10 +1,12 @@
-# Github User Activity CLI 
+# Github User Activity CLI
 
-## Requirement 
+<img src="../assets/github-user-activity.png" />
 
-- Provide the GitHub username as an argument when running the CLI. 
-- Fetch the recent activity of the specified GitHub user using the GitHub API. 
-- Display the fetched activity in the terminal. 
+## Requirement
+
+- Provide the GitHub username as an argument when running the CLI.
+- Fetch the recent activity of the specified GitHub user using the GitHub API.
+- Display the fetched activity in the terminal.
 
 ## Implementation
 
@@ -21,8 +23,7 @@ npm init -y
 npm install axios chalk commander // axios (api), chalk (color terminal), commander (cli)
 ```
 
-- ```#!/usr/bin/env node``` add into index.js
-
+- `#!/usr/bin/env node` add into index.js
 
 ```json
 "bin": {
@@ -35,6 +36,4 @@ chmod +x index.js
 npm link
 ```
 
-- ```"type": "module"``` package.json change ```commonjs```
-
-<img src="../assets/github-user-activity.png" />
+- `"type": "module"` package.json change `commonjs`

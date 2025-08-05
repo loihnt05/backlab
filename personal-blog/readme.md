@@ -1,5 +1,7 @@
 # Personal Blog
 
+![alt text](../assets/personal-blog.png)
+
 ## Requirement
 
 - Guest Section — A list of pages that can be accessed by anyone:

@@ -1,5 +1,7 @@
 # Unit Converter
 
+<img src="../assets/unit-convert.png" />
+
 ## Requirement
 
 - The user can input a value to convert.
@@ -12,6 +14,3 @@
 - Length: millimeter, centimeter, meter, kilometer, inch, foot, yard, mile.
 - Weight: milligram, gram, kilogram, ounce, pound.
 - Temperature: Celsius, Fahrenheit, Kelvin.
-
-
-<img src="../assets/unit-convert.png" />

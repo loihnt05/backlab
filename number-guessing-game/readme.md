@@ -1,5 +1,7 @@
 # Number Guessing Game
 
+<img src="../assets/game-guessing.png" />
+
 ## Requirement
 
 - When the game starts, it should display a welcome message along with the rules of the game.
@@ -20,5 +22,3 @@
 ## How to run
 
 Run `game-guessing` (in directory) or `node index.js`
-
-<img src="../assets/game-guessing.png" />
