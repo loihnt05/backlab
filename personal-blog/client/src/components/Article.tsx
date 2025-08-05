@@ -1,12 +1,22 @@
 import { useNavigate, useParams } from "react-router-dom";
 import type { Article } from "../App";
 import { Link } from "react-router-dom";
-import data from "../data.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Article() {
   const { id } = useParams();
-  const article = data.find((a) => a.id === id);
+  const [article, setArticle] = useState<Article | null>(null);
+
+  useEffect(() => {
+    const fetchArticle = async () => {
+      const response = await fetch(`http://localhost:3000/items`);
+      if (response.ok) {
+        const data = await response.json();
+        setArticle(data);
+      }
+    };
+    fetchArticle();
+  }, [id]);
 
   if (!article) {
     return <div>Article not found</div>;
@@ -41,6 +51,7 @@ export function ArticleHome({
   const handleDelete = (article: Article) => {
     setListArticles((prev => prev.filter(item => item.id !== article.id)))
   };
+
   return (
     <div className="h-full space-y-10">
       {showPopup && (
@@ -111,7 +122,7 @@ export function ArticleHome({
                 </div>
               ) : (
                 <p className="text-md text-gray-400 font-semibold ml-auto">
-                  {article.publishDate.toDateString()}
+                  {article.publishDate}
                 </p>
               )}
             </div>
