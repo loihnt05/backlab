@@ -1,6 +1,8 @@
 # Task Tracker CLI
 
-## Requirement 
+<img src="../assets/task-tracker.png" />
+
+## Requirement
 
 - Add, Update, and Delete tasks
 - Mark a task as in progress or done
@@ -20,20 +22,23 @@
 - Ensure to handle errors and edge cases gracefully.
 
 ## Conduct task with CLI
-- Install commander ```pnpm add commander``` or ```pnpm add -D @types/commander```
+
+- Install commander `pnpm add commander` or `pnpm add -D @types/commander`
 
 - Add bin into package.json to build task:
+
 ```json
 "bin": {
   "task": "dist/task.js"
 }
 ```
 
-- Write in a head of task.ts ```#!/usr/bin/env node``` 
+- Write in a head of task.ts `#!/usr/bin/env node`
 
-- ```ts.config.json ``` like 
+- `ts.config.json ` like
+
 ```json
-{ 
+{
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
@@ -44,10 +49,11 @@
   "include": ["task.ts", "taskManager.ts"]
 }
 ```
-- Compile code from .ts to .js to run ```npx tsc ```
-- Grant execution permission ```chmod +x dist/task.js```
 
-- Link to global file ```npm link```
+- Compile code from .ts to .js to run `npx tsc `
+- Grant execution permission `chmod +x dist/task.js`
+
+- Link to global file `npm link`
 
 ## How to use Task Tracker CLI
 
@@ -57,5 +63,3 @@ task-cli update "1" -d "new change" -s "done" // update description and status b
 task-cli delete "2" // delete task by id
 task-cli list // all tasks
 ```
-
-<img src="../assets/task-tracker.png" />
