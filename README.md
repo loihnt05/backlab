@@ -59,7 +59,7 @@ Click any of the images below to view the readme and live demo of the project.
 
   <div style="background-color: #f4f4f4; padding: 10px; border-radius: 8px; font-size: 14px; display: inline-block;">
     Maintained with ☕ & ❤️ by 
-    <a href="https://github.com/loihnt05"><strong>TaiLoiHo</strong></a>
+    <a href="https://github.com/loihnt05"><strong>TaiLoi</strong></a>
     <br/>
   <sub>
      • Open Source • 

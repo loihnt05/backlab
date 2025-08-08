@@ -11,7 +11,6 @@
 
 ## Requirements
 
-
 - Create a new blog post
 - Update an existing blog post
 - Delete an existing blog post
