@@ -1,4 +1,6 @@
-# Weather API 
+# Weather API
+
+<img src="../assets/weather-api.png" />
 
 ## Implementation
 
@@ -9,6 +11,7 @@
 - Implement rate limiting to prevent abuse of your API. You can use a package like express-rate-limit if you are using Node.js or flask-limiter if you are using Python.
 
 ## Conduct
+
 - Using OpenWeatherAPI from https://openweathermap.org/api
 
 - Integrating Third Party Service Provider
