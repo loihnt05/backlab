@@ -1,0 +1,26 @@
+{
+  "name": "tmdb-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "chalk": "^5.6.0",
+    "commander": "^14.0.0",
+    "fs": "0.0.1-security"
+  },
+  "bin": {
+    "tmdb-app": "dist/index.js"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.5",
+    "typescript": "^5.9.2"
+  }
+}
