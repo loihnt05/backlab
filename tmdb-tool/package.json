@@ -14,7 +14,8 @@
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "axios": "^1.11.0",
-    "commander": "^14.0.0"
+    "commander": "^14.0.0",
+    "dotenv": "^17.2.1"
   },
   "devDependencies": {
     "chalk": "^5.6.0",
@@ -24,5 +25,5 @@
   "bin": {
     "tmdb-app": "dist/index.js"
   },
-    "type": "commonjs"
+  "type": "commonjs"
 }
