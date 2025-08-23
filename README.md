@@ -12,8 +12,9 @@ This repository contains backend projects built following the <a href="https://r
 - <a href='https://github.com/loihnt05/backlab/tree/main/number-guessing-game'> Number Guessing Game </a>
 - <a href='https://github.com/loihnt05/backlab/tree/main/unit-converter'> Unit Converter </a>
 - <a href='https://github.com/loihnt05/backlab/tree/main/personal-blog'> Personal Blog </a>
-
 - <a href='https://github.com/loihnt05/backlab/tree/main/weather-api'> Weather API </a>
+- <a href='https://github.com/loihnt05/backlab/tree/main/tmdb-tool'> TMDB CLI TOOL </a>
+
 ### 🧰 Intermediate
 
 ### 🧠 Advanced
@@ -46,6 +47,9 @@ Click any of the images below to view the readme and live demo of the project.
   </a>
   <a href="https://github.com/loihnt05/backlab/tree/main/weather-api">
     <img src="./assets/weather-api.png" alt="Weather API Screenshot" style="width: 70%; height: auto" />
+  </a>
+  <a href="https://github.com/loihnt05/backlab/tree/main/tmdb-tool">
+    <img src="./assets/tmdb-tool.png" alt="TMDB CLI TOOL Screenshot" style="width: 70%; height: auto" />
   </a>
 </div>
 
